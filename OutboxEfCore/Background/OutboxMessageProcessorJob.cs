@@ -1,6 +1,8 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using Outbox.Domain;
+using Outbox.Infrastructure.EfCore;
 using Quartz;
 
 namespace OutboxEfCore;

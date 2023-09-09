@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutboxEfCore", "OutboxEfCore\OutboxEfCore.csproj", "{E6446348-1A05-4C7D-8C41-E07C753260E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OutboxEfCore", "OutboxEfCore\OutboxEfCore.csproj", "{E6446348-1A05-4C7D-8C41-E07C753260E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Outbox.Domain", "Outbox.Domain\Outbox.Domain.csproj", "{75D8E9C2-5784-4FD0-A72D-40184BD23416}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Outbox.Application", "Outbox.Application\Outbox.Application.csproj", "{D42E7C79-15CC-4906-B161-DDCB110787A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Outbox.IntegrationEvents", "Outbox.IntegrationEvents\Outbox.IntegrationEvents.csproj", "{4F85C9D1-F831-465D-885E-DD6DC1B50D6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Outbox.Infrastructure.EfCore", "Outbox.Infrastructure\Outbox.Infrastructure.EfCore.csproj", "{148CC192-E3F9-4A7C-893C-B0757DE52424}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Outbox.Integration", "Outbox.Integration\Outbox.Integration.csproj", "{1784D6E3-0BB7-4327-AA51-51376671CC61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +25,26 @@ Global
 		{E6446348-1A05-4C7D-8C41-E07C753260E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6446348-1A05-4C7D-8C41-E07C753260E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6446348-1A05-4C7D-8C41-E07C753260E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75D8E9C2-5784-4FD0-A72D-40184BD23416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D8E9C2-5784-4FD0-A72D-40184BD23416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75D8E9C2-5784-4FD0-A72D-40184BD23416}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D8E9C2-5784-4FD0-A72D-40184BD23416}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D42E7C79-15CC-4906-B161-DDCB110787A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D42E7C79-15CC-4906-B161-DDCB110787A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D42E7C79-15CC-4906-B161-DDCB110787A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D42E7C79-15CC-4906-B161-DDCB110787A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F85C9D1-F831-465D-885E-DD6DC1B50D6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F85C9D1-F831-465D-885E-DD6DC1B50D6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F85C9D1-F831-465D-885E-DD6DC1B50D6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F85C9D1-F831-465D-885E-DD6DC1B50D6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{148CC192-E3F9-4A7C-893C-B0757DE52424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{148CC192-E3F9-4A7C-893C-B0757DE52424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{148CC192-E3F9-4A7C-893C-B0757DE52424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{148CC192-E3F9-4A7C-893C-B0757DE52424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1784D6E3-0BB7-4327-AA51-51376671CC61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1784D6E3-0BB7-4327-AA51-51376671CC61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1784D6E3-0BB7-4327-AA51-51376671CC61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1784D6E3-0BB7-4327-AA51-51376671CC61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

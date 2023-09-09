@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using OutboxEfCore;
+using Outbox.Infrastructure.EfCore;
 
 #nullable disable
 
-namespace OutboxEfCore.Migrations
+namespace Outbox.Infrastructure.EfCore.Migrations
 {
     [DbContext(typeof(DataContext))]
     partial class DataContextModelSnapshot : ModelSnapshot

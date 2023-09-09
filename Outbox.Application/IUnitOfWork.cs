@@ -1,4 +1,4 @@
-﻿namespace OutboxEfCore;
+﻿namespace Outbox.Application;
 
 public interface IUnitOfWork
 {

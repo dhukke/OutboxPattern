@@ -1,9 +1,8 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace OutboxEfCore.Migrations
+namespace Outbox.Infrastructure.EfCore.Migrations
 {
     /// <inheritdoc />
     public partial class Initial : Migration

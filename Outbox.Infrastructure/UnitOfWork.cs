@@ -1,6 +1,8 @@
 ﻿using Newtonsoft.Json;
+using Outbox.Application;
+using Outbox.Domain;
 
-namespace OutboxEfCore;
+namespace Outbox.Infrastructure.EfCore;
 
 public class UnitOfWork : IUnitOfWork
 {
@@ -31,7 +33,7 @@ public class UnitOfWork : IUnitOfWork
             .Select(domainEvent => new OutboxMessage
             {
                 Id = Guid.NewGuid(),
-                OccuredOnUtc = DateTime.UtcNow, // change to datetime provider
+                OccuredOnUtc = DateTime.UtcNow,
                 Type = domainEvent.GetType().Name,
                 Content = JsonConvert.SerializeObject(
                     domainEvent,

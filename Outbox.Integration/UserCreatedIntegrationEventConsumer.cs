@@ -1,6 +1,8 @@
 ﻿using MassTransit;
+using Microsoft.Extensions.Logging;
+using Outbox.IntegrationEvents;
 
-namespace OutboxEfCore;
+namespace OutboxEfCore.Itengration;
 
 public class UserCreatedIntegrationEventConsumer : IConsumer<UserCreatedIntegrationEvent>
 {

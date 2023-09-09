@@ -1,4 +1,4 @@
-﻿namespace OutboxEfCore;
+﻿namespace Outbox.Infrastructure.EfCore;
 
 public class OutboxMessage
 {

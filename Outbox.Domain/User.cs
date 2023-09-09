@@ -1,13 +1,10 @@
-﻿namespace OutboxEfCore;
+﻿namespace Outbox.Domain;
 
 public class User : AggregateRoot
 {
     public string Name { get; set; } = string.Empty;
 
-    public User(string name) : base(Guid.NewGuid())
-    {
-        Name = name;
-    }
+    public User(string name) : base(Guid.NewGuid()) => Name = name;
 
     public static User Create(string name)
     {

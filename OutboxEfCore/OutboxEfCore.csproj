@@ -23,4 +23,11 @@
 		<PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\Outbox.Application\Outbox.Application.csproj" />
+	  <ProjectReference Include="..\Outbox.Domain\Outbox.Domain.csproj" />
+	  <ProjectReference Include="..\Outbox.Infrastructure\Outbox.Infrastructure.EfCore.csproj" />
+	  <ProjectReference Include="..\Outbox.IntegrationEvents\Outbox.IntegrationEvents.csproj" />
+	</ItemGroup>
+
 </Project>

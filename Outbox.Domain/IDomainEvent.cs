@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace OutboxEfCore;
+namespace Outbox.Domain;
 
 public interface IDomainEvent : INotification
 {

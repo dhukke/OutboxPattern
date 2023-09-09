@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using OutboxEfCore;
+using Outbox.Infrastructure.EfCore;
 
 #nullable disable
 
-namespace OutboxEfCore.Migrations
+namespace Outbox.Infrastructure.EfCore.Migrations
 {
     [DbContext(typeof(DataContext))]
     [Migration("20230909162041_Initial")]

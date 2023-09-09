@@ -1,7 +1,10 @@
 ﻿using MassTransit;
 using MediatR;
+using Microsoft.Extensions.Logging;
+using Outbox.Domain;
+using Outbox.IntegrationEvents;
 
-namespace OutboxEfCore;
+namespace Outbox.Application;
 
 public sealed class UserCreatedDomainEventHandler : INotificationHandler<UserCreatedDomainEvent>
 {

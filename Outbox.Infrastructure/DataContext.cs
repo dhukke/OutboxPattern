@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Outbox.Domain;
 
-namespace OutboxEfCore;
+namespace Outbox.Infrastructure.EfCore;
 
 public class DataContext : DbContext
 {

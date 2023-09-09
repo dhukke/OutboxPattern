@@ -1,7 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Outbox.Domain;
 
-namespace OutboxEfCore;
+namespace Outbox.Infrastructure.EfCore;
 
 public class UserConfiguration : IEntityTypeConfiguration<User>
 {

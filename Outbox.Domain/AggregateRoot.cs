@@ -1,4 +1,4 @@
-﻿namespace OutboxEfCore;
+﻿namespace Outbox.Domain;
 
 public abstract class AggregateRoot : Entity
 {

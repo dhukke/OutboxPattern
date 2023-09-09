@@ -1,10 +1,11 @@
 using MassTransit;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Outbox.Application;
+using Outbox.Infrastructure.EfCore;
 using OutboxEfCore;
 using Quartz;
 using Serilog;
-using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,7 +28,10 @@ builder.Services.AddDbContext<DataContext>(
         )
 );
 
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+builder.Services.AddMediatR(cfg =>
+    cfg.RegisterServicesFromAssembly(typeof(Program).Assembly)
+        .RegisterServicesFromAssembly(typeof(IOutboxApplicationMarker).Assembly)
+);
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();

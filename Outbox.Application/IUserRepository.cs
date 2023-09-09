@@ -1,4 +1,6 @@
-﻿namespace OutboxEfCore;
+﻿using Outbox.Domain;
+
+namespace Outbox.Application;
 
 public interface IUserRepository
 {

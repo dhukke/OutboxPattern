@@ -1,6 +1,7 @@
 ﻿using MediatR;
+using Outbox.Domain;
 
-namespace OutboxEfCore;
+namespace Outbox.Application;
 
 public sealed record CreateUserCommand(string Name) : IRequest<User>;
 
@@ -22,7 +23,7 @@ public sealed class CreateUserCommandHander : IRequestHandler<CreateUserCommand,
 
         _userRepository.Insert(user);
 
-        await _unitOfWork.SaveChangesAsync();
+        await _unitOfWork.SaveChangesAsync(cancellationToken);
 
         return user;
     }
