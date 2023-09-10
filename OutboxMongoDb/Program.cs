@@ -1,9 +1,8 @@
+using ApiIntegrationLog.Api.Database;
 using MassTransit;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 using Outbox.Application;
-using Outbox.Infrastructure.EfCore;
-using OutboxEfCore;
+using OutboxMongoDb;
 using Quartz;
 using Serilog;
 
@@ -19,14 +18,16 @@ Log.Logger = new LoggerConfiguration()
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(Log.Logger);
 
-builder.Services.AddDbContext<DataContext>(
-    options =>
-    options
-        .UseSqlServer("Server=localhost,1433;User ID=sa;Password=yourStrong(!)Password;Initial Catalog=OutboxEfDb;TrustServerCertificate=true;")
-        .UseLoggerFactory(
-            LoggerFactory.Create(builder => builder.AddConsole())
-        )
-);
+MongoDbPersistence.Configure();
+
+builder.Services.AddSingleton(serviceProvider =>
+{
+    var connectionString = "mongodb://localhost:28017";
+    var databaseName = "OutboxMongoDb";
+    var logger = serviceProvider.GetRequiredService<ILogger<MongoDbContext>>();
+
+    return new MongoDbContext(connectionString, databaseName, logger);
+});
 
 builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(typeof(Program).Assembly)
